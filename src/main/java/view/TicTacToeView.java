@@ -186,6 +186,9 @@ public class TicTacToeView
                 squareButtons[row][col].setEnabled(true);
             }
         }
+        // Updating the scorecard
+        player1Score.setText(""+model.getScorePlayer1());
+        player2Score.setText(""+model.getScorePlayer2());
     }
 
     public static void main(String[] args) {
