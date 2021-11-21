@@ -113,9 +113,9 @@ public class TicTacToeModel implements TicTacToeModelInterface{
         if (checkWin()) {
             JOptionPane.showMessageDialog(null, currentPlayer.getName()
                     +" ("+currentPlayer.getCharacter()+") wins!");
-            notifyWinnerObservers();
             // Giving a point to the winner
             currentPlayer.addPoint();
+            notifyWinnerObservers();
             switchPlayers();
         }
         // Checking if board is full
