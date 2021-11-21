@@ -49,6 +49,16 @@ public class TicTacToeModel implements TicTacToeModelInterface{
     }
 
     @Override
+    public String getNamePlayer1() {
+        return player1.getName();
+    }
+
+    @Override
+    public String getNamePlayer2() {
+        return player2.getName();
+    }
+
+    @Override
     public int getScorePlayer1() {
         return player1.getScore();
     }
