@@ -66,6 +66,8 @@ public class TicTacToeView
     // Info Panel
     private JPanel infoPanel;
     private JLabel currentPlayer;
+    private JLabel player1Score;
+    private JLabel player2Score;
     /**
      * Builds the Information Panel UI
      */
@@ -81,8 +83,26 @@ public class TicTacToeView
         infoPanel.add(titlePanel);
         // Game info
         JPanel playerPanel = new JPanel();
+        playerPanel.setLayout(new GridLayout(1, 2));
+        // Game info - Turn
+        JPanel turnPanel = new JPanel();
         currentPlayer = new JLabel("Turn: " + model.getPlayer());
-        playerPanel.add(currentPlayer);
+        turnPanel.add(currentPlayer);
+        playerPanel.add(turnPanel);
+        // Game info - Scorecard
+        JPanel scorecardPanel = new JPanel();
+        scorecardPanel.setLayout(new GridLayout(2, 2));
+        // Scorecard - Player 1
+        scorecardPanel.add(new JPanel().add(new JLabel("Player 1:")));
+        player1Score = new JLabel(""+model.getScorePlayer1());
+        scorecardPanel.add(new JPanel().add(player1Score));
+        // Scorecard - Player 2
+        scorecardPanel.add(new JPanel().add(new JLabel("Player 2:")));
+        player2Score = new JLabel(""+model.getScorePlayer2());
+        scorecardPanel.add(new JPanel().add(player2Score));
+
+        playerPanel.add(scorecardPanel);
+
         infoPanel.add(playerPanel);
     }
 
