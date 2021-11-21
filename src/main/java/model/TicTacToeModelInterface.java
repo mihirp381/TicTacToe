@@ -7,6 +7,8 @@ public interface TicTacToeModelInterface {
     // Player Details
     String getPlayer();
     String getCharacter();
+    int getScorePlayer1();
+    int getScorePlayer2();
 
     // Board Details
     int getBoardSize();
