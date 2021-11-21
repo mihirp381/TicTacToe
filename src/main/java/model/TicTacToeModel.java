@@ -48,6 +48,16 @@ public class TicTacToeModel implements TicTacToeModelInterface{
         return currentPlayer.getCharacter();
     }
 
+    @Override
+    public int getScorePlayer1() {
+        return 0;
+    }
+
+    @Override
+    public int getScorePlayer2() {
+        return 0;
+    }
+
     /***************************************
      * Board Details
      ***************************************/
