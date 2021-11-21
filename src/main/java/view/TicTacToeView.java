@@ -93,11 +93,11 @@ public class TicTacToeView
         JPanel scorecardPanel = new JPanel();
         scorecardPanel.setLayout(new GridLayout(2, 2));
         // Scorecard - Player 1
-        scorecardPanel.add(new JPanel().add(new JLabel("Player 1:")));
+        scorecardPanel.add(new JPanel().add(new JLabel(model.getNamePlayer1()+":")));
         player1Score = new JLabel(""+model.getScorePlayer1());
         scorecardPanel.add(new JPanel().add(player1Score));
         // Scorecard - Player 2
-        scorecardPanel.add(new JPanel().add(new JLabel("Player 2:")));
+        scorecardPanel.add(new JPanel().add(new JLabel(model.getNamePlayer2()+":")));
         player2Score = new JLabel(""+model.getScorePlayer2());
         scorecardPanel.add(new JPanel().add(player2Score));
 
