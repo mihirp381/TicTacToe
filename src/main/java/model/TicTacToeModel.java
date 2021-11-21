@@ -25,8 +25,8 @@ public class TicTacToeModel implements TicTacToeModelInterface{
         observers = new ArrayList<>();
         winObservers = new ArrayList<>();
 
-        player1 = new Player(1, "Player 1", "X");
-        player2 = new Player(2, "Player 2", "0");
+        player1 = new Player(1, "Player 1", "X", 0);
+        player2 = new Player(2, "Player 2", "0", 0);
         currentPlayer = player1;
 
         board = new int[BOARD_SIZE][BOARD_SIZE];
@@ -50,12 +50,12 @@ public class TicTacToeModel implements TicTacToeModelInterface{
 
     @Override
     public int getScorePlayer1() {
-        return 0;
+        return player1.getScore();
     }
 
     @Override
     public int getScorePlayer2() {
-        return 0;
+        return player2.getScore();
     }
 
     /***************************************
